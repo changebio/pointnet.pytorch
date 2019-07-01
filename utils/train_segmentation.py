@@ -11,7 +11,8 @@ from pointnet.model import PointNetDenseCls, feature_transform_regularizer
 import torch.nn.functional as F
 from tqdm import tqdm
 import numpy as np
-
+torch.cuda.set_device(3)
+print(torch.cuda.current_device())
 
 parser = argparse.ArgumentParser()
 parser.add_argument(

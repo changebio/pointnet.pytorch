@@ -10,7 +10,8 @@ from pointnet.dataset import ShapeNetDataset, ModelNetDataset
 from pointnet.model import PointNetCls, feature_transform_regularizer
 import torch.nn.functional as F
 from tqdm import tqdm
-
+torch.cuda.set_device(3)
+print(torch.cuda.current_device())
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
